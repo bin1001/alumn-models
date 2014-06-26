@@ -8,6 +8,12 @@
 		<spring-data-mongodb.version>1.5.0.RELEASE</spring-data-mongodb.version>
 	</properties>
 	
+	 <parent>
+		<groupId>com.t7p.alumn</groupId>
+		<artifactId>alumn-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	
 	<dependencies>
 		<!-- Spring data mongodb -->
 		<dependency>
