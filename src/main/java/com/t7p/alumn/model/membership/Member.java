@@ -1,10 +1,9 @@
 package com.t7p.alumn.model.membership;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
-
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "MEMBER")
@@ -17,11 +16,16 @@ public class Member {
 	private String uinID;
 	private String address;
 	private String biography;
+	private Date joinDate;
 	private List<String> tags;
-	
 	private List<Follower> followers;
 	
-	
+	public Date getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
 	public String getNickName() {
 		return nickName;
 	}
