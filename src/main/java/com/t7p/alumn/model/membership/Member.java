@@ -1,6 +1,10 @@
 package com.t7p.alumn.model.membership;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
+
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "MEMBER")
@@ -13,6 +17,9 @@ public class Member {
 	private String uinID;
 	private String address;
 	private String biography;
+	private List<String> tags;
+	
+	private List<Follower> followers;
 	
 	
 	public String getNickName() {
@@ -51,4 +58,18 @@ public class Member {
 	public void setBiography(String biography) {
 		this.biography = biography;
 	}
+	public List<Follower> getFollowers() {
+		return followers;
+	}
+	public void setFollowers(List<Follower> followers) {
+		this.followers = followers;
+	}
+	public List<String> getTags() {
+		return tags;
+	}
+	public void setTags(List<String> tags) {
+		this.tags = tags;
+	}
+	
+	
 }
